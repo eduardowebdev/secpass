@@ -17,5 +17,5 @@ WORKDIR /app/backend
 COPY --from=python-builder /install /usr/local
 COPY backend/app/ ./app/
 COPY --from=frontend-builder /app/frontend/dist/ ../frontend/dist/
-EXPOSE 8000
+EXPOSE 7860
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
